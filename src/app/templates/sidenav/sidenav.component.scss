@@ -1,0 +1,104 @@
+mat-toolbar {
+    background: #333399;
+    color: white;
+}
+
+mat-expansion-panel {
+    background-color: #333399;
+}
+
+.sidenav-dms {
+    margin: 5px;
+    width: 200px;
+    border-right: none;
+    background: #333399;
+    color: white;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+    font: 400 14px/20px Roboto, "Helvetica Neue", sans-serif;
+    letter-spacing: normal;
+}
+
+.content {
+    height: calc(100vh - 75px);
+    border-radius: 10px;
+    margin: 5px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: lightgray;
+}
+
+mat-sidenav-container {
+    height: calc(100vh - 65px);
+}
+
+mat-panel-title {
+    color: white;
+}
+
+.mat-icon-dms {
+    margin-right: 0.2em;
+}
+
+.exp-header-dms {
+    padding: 0 20px 0 18px;
+}
+
+.menu-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font: 400 14px/20px Roboto, "Helvetica Neue", sans-serif;
+    letter-spacing: normal;
+    mat-icon {
+        margin-right: 8px;
+    }
+}
+
+.avatar {
+    margin-top: 16px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.nav-dms a {
+    color: white;
+    font: 400 14px/20px Roboto, "Helvetica Neue", sans-serif;
+    letter-spacing: normal;
+}
+
+.name {
+    margin-top: 8px;
+    font-weight: normal;
+}
+
+.designation {
+    margin-top: 2px;
+    font-size: 0.7rem;
+    color: lightgrey;
+}
+
+mat-divider {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 800px) {
+    .content {
+        margin-left: 5px;
+    }
+}
+
+@media (hover: none) {
+    .mat-expansion-panel:not(.mat-expanded):not([aria-disabled=true]) .mat-expansion-panel-header:hover {
+        background: #339;
+    }
+}
