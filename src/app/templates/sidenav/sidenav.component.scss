@@ -214,23 +214,19 @@ button.mat-focus-indicator.mat-mini-fab.mat-button-base.mat-primary {
 }
 
 @media (max-width: 480px) {
-    .example-button-container {
+    .container-logo {
+        width: calc(100% - 75px);
         display: flex;
         justify-content: center;
-        width: 40px;
-        align-items: center;
+    }
+    .buttons-toolbar {
+        display: none;
     }
     .title-toolbar-app {
         display: flex;
         align-items: center;
-        width: 140px;
+        width: 100%;
         justify-content: flex-start;
-    }
-    button.mat-focus-indicator.mat-mini-fab.mat-button-base.mat-primary {
-        width: 35px;
-        height: 35px;
-        background-color: #fafafa;
-        color: $main-color;
     }
 }
 
