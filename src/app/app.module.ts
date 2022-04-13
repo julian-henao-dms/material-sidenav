@@ -5,6 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { ProductComponent } from './components/product/product.component';
+import { HomeComponent } from './components/home/home.component';
+import { CategoriesComponent } from './components/categories/categories.component';
+
 // Material
 import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -13,10 +17,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import { SidenavComponent } from './templates/sidenav/sidenav.component';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { CategoriesComponent } from './components/categories/categories.component';
-import { HomeComponent } from './components/home/home.component';
 import { MatListModule } from '@angular/material/list';
-import { ProductComponent } from './components/product/product.component';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { ProductComponent } from './components/product/product.component';
     MatIconModule,
     MatDividerModule,
     MatExpansionModule,
-    MatListModule
+    MatListModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

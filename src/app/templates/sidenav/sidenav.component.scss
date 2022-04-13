@@ -1,17 +1,19 @@
+$main-color: #333399;
 mat-toolbar {
-    background: #333399;
+    background: $main-color;
     color: white;
 }
 
-mat-expansion-panel {
-    background-color: #333399;
+mat-expansion-panel,
+mat-expansion-panel.mat-expanded.mat-expansion-panel-spacing {
+    background: #1c1c6e;
 }
 
 .sidenav-dms {
     margin: 5px;
-    width: 200px;
+    width: 300px;
     border-right: none;
-    background: #333399;
+    background: $main-color;
     color: white;
     border-radius: 10px;
     padding: 16px;
@@ -46,6 +48,9 @@ mat-panel-title {
 
 .exp-header-dms {
     padding: 0 20px 0 18px;
+    height: 3em;
+    background: #1c1c75;
+    font: 400 14px/20px Roboto, "Helvetica Neue", sans-serif;
 }
 
 .menu-button {
@@ -60,8 +65,13 @@ mat-panel-title {
     }
 }
 
+.item-menu-dms {
+    height: 3em;
+    border-left-color: solid 1px rgb(249, 219, 219)
+}
+
 .avatar {
-    margin-top: 16px;
+    margin-top: 10px;
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -74,13 +84,20 @@ mat-panel-title {
     letter-spacing: normal;
 }
 
+a.mat-list-item.mat-focus-indicator.item-menu-dms:hover {
+    border-left: solid 1px #cacaca;
+    box-sizing: border-box;
+}
+
 .name {
-    margin-top: 8px;
+    margin-top: 5px;
+    margin-bottom: 5x;
     font-weight: normal;
 }
 
 .designation {
     margin-top: 2px;
+    margin-bottom: 5px;
     font-size: 0.7rem;
     color: lightgrey;
 }
@@ -91,9 +108,129 @@ mat-divider {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
+.container-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.header-nav {
+    position: fixed;
+    height: 240px;
+    background-color: $main-color;
+    flex-direction: column;
+    width: 280px;
+    display: flex;
+    align-items: center;
+    border-bottom: solid 0.1em #b6b6b6;
+}
+
+.main-nav {
+    position: fixed;
+    top: 330px;
+    bottom: 54px;
+    background-color: $main-color;
+    overflow: auto;
+    width: 280px;
+}
+
+.footer-nav {
+    position: fixed;
+    bottom: 10px;
+    display: flex;
+    height: 40px;
+    background-color: $main-color;
+    align-items: center;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #7859c2;
+    border-radius: 4px;
+    height: 7px;
+}
+
+ ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background: rgb(138, 119, 213);
+    border-radius: 4px;
+}
+
+.title-toolbar-app {
+    display: flex;
+    align-items: center;
+    width: 280px;
+    justify-content: center;
+}
+
+.container-toolbar {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.buttons-toolbar {
+    display: flex;
+}
+
+mat-icon.mat-icon.notranslate.material-icons.mat-icon-no-color {
+    font-size: 20px;
+}
+
+button.mat-focus-indicator.mat-mini-fab.mat-button-base.mat-primary {
+    width: 35px;
+    height: 35px;
+    background-color: #fafafa;
+    color: $main-color;
+}
+
+// buttons
+.example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    align-items: center;
+}
+
 @media (max-width: 800px) {
     .content {
         margin-left: 5px;
+    }
+    .footer-nav {
+        bottom: 15px;
+    }
+    .title-toolbar-app {
+        display: flex;
+        align-items: center;
+        width: 160px;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .example-button-container {
+        display: flex;
+        justify-content: center;
+        width: 40px;
+        align-items: center;
+    }
+    .title-toolbar-app {
+        display: flex;
+        align-items: center;
+        width: 140px;
+        justify-content: flex-start;
+    }
+    button.mat-focus-indicator.mat-mini-fab.mat-button-base.mat-primary {
+        width: 35px;
+        height: 35px;
+        background-color: #fafafa;
+        color: $main-color;
     }
 }
 
