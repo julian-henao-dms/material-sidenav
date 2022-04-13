@@ -223,18 +223,37 @@ button.mat-focus-indicator.mat-mini-fab.mat-button-base.mat-primary {
     align-items: center;
 }
 
+.mat-list-base {
+    padding-top: 0px;
+}
+
+.foot-text {
+    margin-top: 2px;
+    margin-bottom: 0px;
+    font-size: 0.7rem;
+    color: lightgrey;
+}
+
 @media (max-width: 800px) {
     .content {
         margin-left: 5px;
     }
     .footer-nav {
-        bottom: 15px;
+        bottom: 14px;
     }
     .title-toolbar-app {
         display: flex;
         align-items: center;
         width: 160px;
         justify-content: flex-start;
+    }
+    .mat-list-option:hover,
+    .mat-list-option:focus,
+    .mat-nav-list .mat-list-item:hover,
+    .mat-nav-list .mat-list-item:focus,
+    .mat-action-list .mat-list-item:hover,
+    .mat-action-list .mat-list-item:focus {
+        background: rgb(31 31 145);
     }
 }
 
