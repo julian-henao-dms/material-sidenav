@@ -1,12 +1,10 @@
 $main-color: #333399;
+$secundary-color: #1f1f91;
+$content-exp-panel: #1c1c6e;
+$hover-simple-item: #2e2e8e;
 mat-toolbar {
     background: $main-color;
     color: white;
-}
-
-mat-expansion-panel,
-mat-expansion-panel.mat-expanded.mat-expansion-panel-spacing {
-    background: #1c1c6e;
 }
 
 .sidenav-dms {
@@ -46,6 +44,15 @@ mat-panel-title {
     margin-right: 0.2em;
 }
 
+mat-expansion-panel {
+    margin-bottom: 0.2em;
+}
+
+mat-expansion-panel,
+mat-expansion-panel.mat-expanded.mat-expansion-panel-spacing {
+    background: $content-exp-panel;
+}
+
 .exp-header-dms {
     padding: 0 20px 0 18px;
     height: 3em;
@@ -68,6 +75,20 @@ mat-panel-title {
 .item-menu-dms {
     height: 3em;
     border-left-color: solid 1px rgb(249, 219, 219)
+}
+
+.simple-item {
+    margin-bottom: 0.2em;
+    background-color: $secundary-color;
+}
+
+.simple-item:hover {
+    margin-bottom: 0.2em;
+    background-color: $hover-simple-item;
+}
+
+.exp-item {
+    background-color: $content-exp-panel;
 }
 
 .avatar {
@@ -116,12 +137,12 @@ mat-divider {
 .header-nav {
     position: fixed;
     height: 240px;
-    background-color: $main-color;
+    background-color: $secundary-color;
     flex-direction: column;
+    border-radius: 10px;
     width: 280px;
     display: flex;
     align-items: center;
-    border-bottom: solid 0.1em #b6b6b6;
 }
 
 .main-nav {
@@ -198,6 +219,11 @@ button.mat-focus-indicator.mat-mini-fab.mat-button-base.mat-primary {
     align-items: center;
 }
 
+.container-logo {
+    display: flex;
+    align-items: center;
+}
+
 @media (max-width: 800px) {
     .content {
         margin-left: 5px;
@@ -232,6 +258,6 @@ button.mat-focus-indicator.mat-mini-fab.mat-button-base.mat-primary {
 
 @media (hover: none) {
     .mat-expansion-panel:not(.mat-expanded):not([aria-disabled=true]) .mat-expansion-panel-header:hover {
-        background: #339;
+        background: $content-exp-panel;
     }
 }
