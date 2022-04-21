@@ -27,8 +27,9 @@ mat-toolbar {
     margin-left: 10px;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    overflow-y: auto;
     align-items: center;
-    font-size: 2rem;
     color: lightgray;
 }
 

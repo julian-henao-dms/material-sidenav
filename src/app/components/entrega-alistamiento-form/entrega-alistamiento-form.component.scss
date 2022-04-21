@@ -1,0 +1,114 @@
+form {
+    margin: 1.2em 0;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.first-input-group,
+.fouth-input-group {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 1.5em;
+    >mat-form-field {
+        margin: 0 1.5em;
+    }
+}
+
+.second-input-group.variables-entrega {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 1.5em;
+}
+
+.third-input-group.documentos-accesorios {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 1.5em;
+}
+
+.documentos-accesorios__grupo1,
+.documentos-accesorios__grupo2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.radio-btn {
+    display: flex;
+    flex-direction: column;
+}
+
+.dms-radio-group {
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0;
+    align-items: flex-start;
+}
+
+.dms-radio-button {
+    margin: 5px;
+}
+
+.dms-button {
+    float: right;
+    color: #fff;
+    background-color: #333399;
+}
+
+.card-form {
+    overflow-y: auto;
+}
+
+.button-container {
+    width: 95%;
+}
+
+@media (max-width: 800px) {
+    .first-input-group>mat-form-field,
+    .fouth-input-group>mat-form-field {
+        margin: 0 1.5em;
+        width: 85%;
+        margin-top: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .second-input-group.variables-entrega {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-around;
+        margin-bottom: 1.5em;
+        flex-direction: column;
+        align-items: center;
+    }
+    .radio-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .third-input-group.documentos-accesorios {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-bottom: 1.5em;
+        flex-direction: column;
+        align-items: center;
+    }
+    .documentos-accesorios__grupo2 h2 {
+        margin-top: 1.2em;
+    }
+    .button-container {
+        width: 95%;
+        display: flex;
+        justify-content: center;
+    }
+}

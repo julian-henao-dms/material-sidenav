@@ -1,0 +1,102 @@
+<mat-card class="">
+    <div class="container-form">
+        <form (ngSubmit)="onSubmit" #entregaAlistamientoForm="ngForm">
+            <div class="form-content">
+
+                <div class="first-input-group">
+                    <mat-form-field>
+                        <mat-label>Vehiculo Solicitado</mat-label>
+                        <input type="text" matInput [(ngModel)]="data.vehiculo_solicitado" required name="vehiculo_solicitado">
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <mat-label>Fecha</mat-label>
+                        <input matInput [matDatepicker]="picker" [(ngModel)]="data.fecha" required name="fecha">
+                        <mat-hint>MM/DD/YYYY</mat-hint>
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <mat-label>Sala</mat-label>
+                        <input type="text" matInput [(ngModel)]="data.sala" required name="sala">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Chasis</mat-label>
+                        <input type="text" matInput [(ngModel)]="data.chasis" required name="chasis">
+                    </mat-form-field>
+                </div>
+
+                <div class="second-input-group variables-entrega">
+
+                    <div class="radio-btn">
+                        <label id="dms-radio-group-label">Cumplimiento en la entrega</label>
+                        <mat-radio-group class="dms-radio-group " aria-label="Cumplimiento en la entrega" [(ngModel)]="data.cumplimiento" required name="cumplimiento">
+                            <mat-radio-button class="dms-radio-button" [value]="SI">Si</mat-radio-button>
+                            <mat-radio-button class="dms-radio-button" [value]="NO">No</mat-radio-button>
+                        </mat-radio-group>
+
+                    </div>
+                    <div class="radio-btn">
+                        <label id="dms-radio-group-label">Limpieza Interior</label>
+                        <mat-radio-group class="dms-radio-group " aria-label="Limpieza Interior" [(ngModel)]="data.limpieza_int" required name="limpieza_int">
+                            <mat-radio-button class="dms-radio-button" [value]="SI">Si</mat-radio-button>
+                            <mat-radio-button class="dms-radio-button" [value]="NO">No</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                    <div class="radio-btn">
+                        <label id="dms-radio-group-label">Limpieza Exterior</label>
+                        <mat-radio-group class="dms-radio-group " aria-label="Limpieza Exterior" [(ngModel)]="data.limpieza_ext" required name="limpieza_ext">
+                            <mat-radio-button class="dms-radio-button" [value]="SI">Si</mat-radio-button>
+                            <mat-radio-button class="dms-radio-button" [value]="NO">No</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                </div>
+                <div class="third-input-group documentos-accesorios">
+                    <div class="documentos-accesorios__grupo1">
+
+                        <mat-checkbox [(ngModel)]="data.herramientas" name="herramientas">Herramientas</mat-checkbox>
+                        <mat-checkbox [(ngModel)]="data.kit_llaves" name="kit_llaves">Juego completo de llaves</mat-checkbox>
+                        <mat-checkbox [(ngModel)]="data.manuales" name="manuales">Manuales</mat-checkbox>
+                        <mat-checkbox [(ngModel)]="data.garantia" name="garantia">Garantía</mat-checkbox>
+                        <mat-checkbox [(ngModel)]="data.VDQI" name="VDQI">Informes VDQI</mat-checkbox>
+                        <mat-checkbox [(ngModel)]="data.informes_flash_aves" name="informes_flash_aves">Informes flash aves</mat-checkbox>
+                        <mat-checkbox [(ngModel)]="data.PDI" name="PDI">Informes PDI</mat-checkbox>
+
+                    </div>
+                    <div class="documentos-accesorios__grupo2">
+                        <h2>Verifique accesorios</h2>
+
+                        <mat-checkbox [(ngModel)]="data.aire" name="aire">Aire</mat-checkbox>
+                        <mat-checkbox [(ngModel)]="data.radio" name="radio">Radio</mat-checkbox>
+                        <mat-checkbox [(ngModel)]="data.cojineria" name="cojineria">Cojinería</mat-checkbox>
+                        <mat-checkbox [(ngModel)]="data.antena" name="antena">Antena</mat-checkbox>
+
+                    </div>
+                </div>
+
+                <div class="fouth-input-group">
+                    <mat-form-field>
+                        <mat-label>notas</mat-label>
+                        <input type="text" matInput [(ngModel)]="data.notas" required name="notas">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Conductor</mat-label>
+                        <input type="text" matInput [(ngModel)]="data.conductor" required name="conductor">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Firma Sala</mat-label>
+                        <input type="text" matInput [(ngModel)]="data.firma_sala" required name="sala">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput type="time" placeholder="Hora" [(ngModel)]="data.hora" required name="hora">
+                    </mat-form-field>
+                </div>
+                <div class="button-container">
+                    <button [disabled]="entregaAlistamientoForm.invalid" mat-button class="dms-button" type="submit" (click)="onSubmit(data)">Guardar</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</mat-card>

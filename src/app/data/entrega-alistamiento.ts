@@ -1,0 +1,50 @@
+export interface EntregaAlistamiento{
+  
+    vehiculo_solicitado: string,
+    fecha: Date,
+    sala: string,
+    chasis: number,
+    cumplimiento: number,
+    limpieza_int: number,  
+    limpieza_ext: number,
+    herramientas: number,
+    kit_llaves: number,
+    manuales: number,
+    garantia: number,
+    VDQI: number,
+    informes_flash_aves: number,
+    PDI: number,
+    aire: number,
+    radio: number,
+    cojineria: number,
+    antena: number,
+    notas: string,
+    conductor: string,
+    firma_sala: string,
+    hora: Date,
+  
+}
+
+// export interface Recepcion {
+//     id_emp: number,
+//     id: number,
+//     usu: number,
+//     id_cot_item_lote: number,
+//     fecha: Date,
+//     cumplimiento: number,
+//     limpieza_int: number,
+//     limpieza_ext: number,
+//     herramienta: number,
+//   kit_llaves: number,
+//   manuales: number,
+//   garantia: number,
+//   VDQI: number,
+//   PDI: number,
+//   aire: number,
+//   radio: number,
+//   cojineria: number,
+//   antena: number,
+//   notas: string,
+//   id_usuario_entrega: number
+  
+//   }
