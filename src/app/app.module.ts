@@ -9,8 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductComponent } from './components/product/product.component';
 import { HomeComponent } from './components/home/home.component';
 import { CategoriesComponent } from './components/categories/categories.component';
-import { EntregaAlistamientoFormComponent } from './components/entrega-alistamiento-form/entrega-alistamiento-form.component';
-
+// import { EntregaAlistamientoFormComponent } from './components/entrega-alistamiento-form/entrega-alistamiento-form.component';
+import { EntregaAlistamientoFormComponent } from './components/entrega.alistamiento.form/entrega.alistamiento.form.component';
 // Material
 import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -30,6 +30,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatNativeDateModule } from '@angular/material/core';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     CategoriesComponent,
     HomeComponent,
     ProductComponent,
-    EntregaAlistamientoFormComponent
+    EntregaAlistamientoFormComponent,
   ],
   imports: [
     BrowserModule,

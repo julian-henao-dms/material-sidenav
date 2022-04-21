@@ -1,6 +1,6 @@
 <mat-card class="">
     <div class="container-form">
-        <form (ngSubmit)="onSubmit" #entregaAlistamientoForm="ngForm">
+        <form (ngSubmit)="onSubmit(data)" #entregaAlistamientoForm="ngForm">
             <div class="form-content">
 
                 <div class="first-input-group">
@@ -77,7 +77,7 @@
 
                 <div class="fouth-input-group">
                     <mat-form-field>
-                        <mat-label>notas</mat-label>
+                        <mat-label>Notas</mat-label>
                         <input type="text" matInput [(ngModel)]="data.notas" required name="notas">
                     </mat-form-field>
                     <mat-form-field>
@@ -93,7 +93,7 @@
                     </mat-form-field>
                 </div>
                 <div class="button-container">
-                    <button [disabled]="entregaAlistamientoForm.invalid" mat-button class="dms-button" type="submit" (click)="onSubmit(data)">Guardar</button>
+                    <button [disabled]="entregaAlistamientoForm.invalid" mat-button class="dms-button" type="submit">Guardar</button>
                 </div>
 
             </div>

@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { EntregaAlistamiento } from 'src/app/data/entrega-alistamiento';
 
+
 @Component({
   selector: 'app-entrega-alistamiento-form',
-  templateUrl: './entrega-alistamiento-form.component.html',
-  styleUrls: ['./entrega-alistamiento-form.component.scss']
+  templateUrl: './entrega.alistamiento.form.component.html',
+  styleUrls: ['./entrega.alistamiento.form.component.scss']
 })
 export class EntregaAlistamientoFormComponent implements OnInit {
+
   SI = 1;
   NO = 0;
   public data: EntregaAlistamiento;
@@ -45,6 +47,7 @@ export class EntregaAlistamientoFormComponent implements OnInit {
 
   onSubmit(data: EntregaAlistamiento){
     console.log(this.data);
+
   }
 
  
