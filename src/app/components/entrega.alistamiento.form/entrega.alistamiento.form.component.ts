@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EntregaAlistamiento } from 'src/app/data/entrega-alistamiento';
+import { EntregaAlistamiento } from 'src/app/components/entrega.alistamiento.form/interfaces/entrega-alistamiento';
 
 
 @Component({
